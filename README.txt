@@ -1,0 +1,1 @@
+Little ShiFuMi game without using any if (with maps)
