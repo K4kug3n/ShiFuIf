@@ -1,9 +1,9 @@
 #include <iostream>
+
+#include <map>
 #include <string>
 #include <random>
 #include <array>
-#include <map>
-
 
 std::string str_input()
 {
@@ -13,9 +13,11 @@ std::string str_input()
 	return input;
 }
 
+
 Symbol get_corresponding_int(std::string const& symbol_str, std::map<std::string, int> const& corrsponding_map)
 {
 	return corrsponding_map[symbol_str];
+
 }
 
 std::string get_random_str_symbol()
@@ -28,6 +30,7 @@ std::string get_random_str_symbol()
 
 	return str_symbols[dist(rng)];
 }
+
 
 std::map<std::string, int> get_symbol_corresponding_map()
 {
@@ -56,7 +59,8 @@ std::map<int, std::string> get_corresponding_int_map()
 	corresponding_map.insert( { 2, "Loose" } );
 
 	return corresponding_map;
-}
+
+
 
 int main()
 {
@@ -80,4 +84,5 @@ int main()
 	std::cout << get_corresponding_int_map[ game_graph[user_int][ia_int] ] << std::endl;
 
 	return 0;
+
 }
